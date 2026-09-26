@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yt-automation"
+version = "0.1.0"
+description = "YouTube upload automation and control panel, for your own channel."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "google-auth>=2.58.1",
+    "jsonschema>=4.26.0",
+    "patchright>=1.63.0",
+    "registers>=7.5.0",
+    "streamlit>=1.64.0",
+    "google-api-python-client>=2.140",
+    "google-auth-oauthlib>=1.2",
+    "google-auth-httplib2>=0.2",
+]
+
+# `pip install .[browser]` - only needed for the optional Studio
+# browser-automation path (yt.py). Kept separate so the pure-API path
+# (api.py + app.py) never requires a real Chromium install.
+[project.optional-dependencies]
+browser = ["patchright>=1.45"]
+
+# Flat layout on purpose - api.py/app.py/utils.py/yt.py stay exactly
+# where they are, no src/ package restructure. `pip install .` here
+# pulls in dependencies and puts these modules on the venv's path;
+# the app itself is still run in place with `streamlit run app.py`
+# (or the launch script), which is what makes plain `from utils
+# import ...`-style sibling imports work everywhere, including inside
+# pages/. Always install into a per-client virtualenv (see README) -
+# these are common module names and a global install would collide
+# with other projects.
+[tool.setuptools]
+py-modules = ["api", "app", "utils", "yt"]

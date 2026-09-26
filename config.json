@@ -1,0 +1,48 @@
+{
+  "browsers": {
+    "chrome": {
+      "Windows": [
+        "%LOCALAPPDATA%\\Google\\Chrome\\Application\\chrome.exe",
+        "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+        "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
+      ],
+      "Darwin": [
+        "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+      ],
+      "Linux": [
+        "/usr/bin/google-chrome",
+        "/usr/bin/google-chrome-stable",
+        "/opt/google/chrome/chrome"
+      ]
+    },
+    "edge": {
+      "Windows": [
+        "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+        "C:\\Program Files\\Microsoft\\Edge\\Application\\msedge.exe"
+      ],
+      "Darwin": [
+        "/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge"
+      ],
+      "Linux": ["/usr/bin/microsoft-edge", "/opt/microsoft/msedge/msedge"]
+    },
+    "brave": {
+      "Windows": [
+        "%LOCALAPPDATA%\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
+        "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
+        "C:\\Program Files (x86)\\BraveSoftware\\Brave-Browser\\Application\\brave.exe"
+      ],
+      "Darwin": [
+        "/Applications/Brave Browser.app/Contents/MacOS/Brave Browser"
+      ],
+      "Linux": ["/usr/bin/brave-browser", "/usr/bin/brave"]
+    },
+    "firefox": {
+      "Windows": [
+        "C:\\Program Files\\Mozilla Firefox\\firefox.exe",
+        "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe"
+      ],
+      "Darwin": ["/Applications/Firefox.app/Contents/MacOS/firefox"],
+      "Linux": ["/usr/bin/firefox"]
+    }
+  }
+}
