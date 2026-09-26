@@ -33,6 +33,13 @@ Then either:
   pip install .
   streamlit run app.py
   ```
+- **UV:**
+  ```bash
+  uv sync
+  source .venv/bin/activate      # Windows: .venv\Scripts\activate
+  uv sync
+  streamlit run app.py
+  ```
 
 Either way, the app opens in your browser at `http://localhost:8501`.
 
