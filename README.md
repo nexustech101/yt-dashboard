@@ -18,7 +18,7 @@ machine, and nothing here needs Charles/ArchTech's involvement after setup.
 
 ```bash
 git clone https://github.com/nexustech101/yt-dashboard.git
-cd <repo-folder>
+cd yt-dashboard
 ```
 
 Then either:
